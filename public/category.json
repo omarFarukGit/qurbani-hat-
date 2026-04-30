@@ -1,0 +1,17 @@
+[
+  { "id": 1, "type": "Cow", "category": "Large Animal", "price": 120000 },
+  { "id": 2, "type": "Cow", "category": "Large Animal", "price": 180000 },
+  { "id": 3, "type": "Goat", "category": "Small Animal", "price": 25000 },
+  { "id": 4, "type": "Goat", "category": "Small Animal", "price": 45000 },
+  { "id": 5, "type": "Camel", "category": "Large Animal", "price": 350000 },
+  { "id": 6, "type": "Camel", "category": "Large Animal", "price": 400000 },
+  { "id": 7, "type": "Sheep", "category": "Small Animal", "price": 22000 },
+  { "id": 8, "type": "Sheep", "category": "Small Animal", "price": 30000 },
+  { "id": 9, "type": "Cow", "category": "Large Animal", "price": 220000 },
+  { "id": 10, "type": "Goat", "category": "Small Animal", "price": 60000 },
+  { "id": 11, "type": "Cow", "category": "Large Animal", "price": 130000 },
+  { "id": 12, "type": "Goat", "category": "Small Animal", "price": 27000 },
+  { "id": 13, "type": "Cow", "category": "Large Animal", "price": 200000 },
+  { "id": 14, "type": "Cow", "category": "Large Animal", "price": 160000 },
+  { "id": 15, "type": "Goat", "category": "Small Animal", "price": 52000 }
+]
