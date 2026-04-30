@@ -1,9 +1,18 @@
+"use client";
+import { authClient } from "@/lib/auth-client";
 import { Avatar } from "@heroui/react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
-  const user = true;
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+  const handleSignOut = async () => {
+    await authClient.signOut();
+    toast.success("log out successfully");
+  };
   const link = (
     <>
       <li>
@@ -54,11 +63,22 @@ const Navbar = () => {
         <div className="navbar-end">
           {user ? (
             <div className=" navbar-end gap-2">
-              <Avatar>user</Avatar>
-              <a className="btn">Log Out</a>
+              <Avatar>
+                <Image
+                  src={user?.image}
+                  alt={user?.name}
+                  width={200}
+                  height={200}
+                />
+              </Avatar>
+              <a className="btn" onClick={handleSignOut}>
+                Log Out
+              </a>
             </div>
           ) : (
-            <button>Sign In</button>
+            <Link className="btn" href={"/signin"}>
+              Sign In
+            </Link>
           )}
         </div>
       </div>

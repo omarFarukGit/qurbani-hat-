@@ -11,6 +11,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import React from "react";
 import { GrGoogle } from "react-icons/gr";
 import { toast } from "react-toastify";
@@ -28,7 +29,7 @@ const SignIn = () => {
     });
     console.log({ data, error });
     if (!error) {
-         toast.success('user login successfuly');
+      toast.success("user login successfuly");
     } else {
       toast.error(error.message);
     }
@@ -89,7 +90,17 @@ const SignIn = () => {
             </Description>
             <FieldError />
           </TextField>
-
+          <div>
+            <p>
+              you have don't account please{" "}
+              <span>
+                {" "}
+                <Link href={"/signup"} className=" text-blue-900 border-b">
+                  register now
+                </Link>
+              </span>
+            </p>
+          </div>
           <div className="flex gap-2">
             <Button type="submit">
               <Check />
@@ -99,6 +110,7 @@ const SignIn = () => {
               Reset
             </Button>
           </div>
+
           <div>
             <Button
               onClick={handlGoogleSignIn}
