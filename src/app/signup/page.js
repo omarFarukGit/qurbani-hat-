@@ -43,7 +43,7 @@ const signUp = () => {
   };
 
   return (
-    <div className=" bg-blue-400 h-[80vh] flex justify-center items-center">
+    <div className=" h-[80vh] flex justify-center items-center">
       <Card className="border mx-auto w-125 py-10 mt-5 backdrop-blur-lg bg-white/10  border-white/20 sticky top-0 ">
         <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 

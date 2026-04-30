@@ -42,7 +42,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className=" bg-blue-400 h-[80vh] flex justify-center items-center">
+    <div className="  h-[80vh] flex justify-center items-center">
       <Card className="border mx-auto w-125 py-10 mt-5 backdrop-blur-lg bg-white/10  border-white/20 sticky top-0">
         <h1 className="text-center text-2xl font-bold">Sign IN</h1>
 
@@ -95,7 +95,7 @@ const SignIn = () => {
               you have don't account please{" "}
               <span>
                 {" "}
-                <Link href={"/signup"} className=" text-blue-900 border-b">
+                <Link href={"/signup"} className=" text-red-500 border-b">
                   register now
                 </Link>
               </span>
@@ -111,11 +111,11 @@ const SignIn = () => {
             </Button>
           </div>
 
-          <div>
+          <div className=" text-white">
             <Button
               onClick={handlGoogleSignIn}
               variant="outline"
-              className={"w-full"}
+              className={"w-full text-white"}
             >
               <GrGoogle /> Sign In With Google
             </Button>
