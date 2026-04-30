@@ -8,7 +8,7 @@ const FeaturedAnimal = async () => {
   console.log(FeturedAnimals);
 
   return (
-    <div className=" grid grid-cols-4 gap-3 mt-6">
+    <div className=" grid grid-cols-4 gap-3 mt-6 max-w-7xl mx-auto">
       {FeturedAnimals.map((animal) => (
         <AnimalCard key={animal.id} animal={animal} />
       ))}
