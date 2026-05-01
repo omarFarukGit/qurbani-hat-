@@ -16,7 +16,7 @@ const loading = async () => {
           <Skeleton className="h-5 w-2/5 rounded-lg" />
         </div>
       </div>
-      <div className=" grid grid-cols-4 max-w-7xl mx-auto">
+      <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
         {loadingData.map((d) => (
           <div key={d.id}>
             <div className="shadow-panel  space-y-5 rounded-lg bg-transparent p-4">

@@ -25,7 +25,7 @@ const AllAnimals = () => {
   });
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto mb-4">
       <div className="flex justify-between items-center my-10">
         <p>Animals</p>
 
@@ -39,7 +39,7 @@ const AllAnimals = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {sortedAnimals.map((animal) => (
           <AnimalCard key={animal.id} animal={animal} />
         ))}

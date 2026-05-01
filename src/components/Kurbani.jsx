@@ -4,7 +4,7 @@ import React from "react";
 import qubani from "@/assets/qurbani.jpg";
 const Kurbani = () => {
   return (
-    <div className=" container mx-auto mt-10">
+    <div className=" max-w-7xl mx-auto mt-10">
       <h2 className=" text-3xl font-bold my-4 px-4">
         কুরবানির পশু সম্পর্কে যা জানা জরুরি
       </h2>
@@ -13,7 +13,7 @@ const Kurbani = () => {
           <Image
             src={qubani}
             className="max-w-sm rounded-lg shadow-2xl"
-            width={400}
+            width={350}
             height={300}
             alt="hero"
           />

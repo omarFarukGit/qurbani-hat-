@@ -6,7 +6,7 @@ const Loading = async () => {
   const data = await getAllAnimalsData();
   const loadingData = data.slice(0, 4);
   return (
-    <div className=" grid grid-cols-4 max-w-7xl mx-auto">
+    <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
       {loadingData.map((d) => (
         <div key={d.id}>
           <div className="shadow-panel  space-y-5 rounded-lg bg-transparent p-4">

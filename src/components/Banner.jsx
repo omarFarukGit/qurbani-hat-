@@ -10,8 +10,8 @@ const Banner = () => {
         <Image
           src={bannarImg}
           className="max-w-sm rounded-lg shadow-2xl"
-          width={400}
-          height={300}
+          width={350}
+          height={400}
           alt="hero"
         />
         <div>
