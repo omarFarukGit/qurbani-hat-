@@ -14,18 +14,18 @@ import {
 import { UpdateUserModal } from "@/components/UpdateUserModal";
 
 export default async function MyProfilePage() {
-  const session = await auth.api.getSession({ headers: await headers() });
+    const session = await auth.api.getSession({ headers: await headers() });
 
-  if (!session) {
-    redirect("/login");
-  }
+    if (!session) {
+      redirect("/login");
+    }
 
-  const user = session.user;
+    const user = session.user;
 
-  //   const user = {
-  //     name: "sinan",
-  //     email: "sina@gmail.com",
-  //   };
+//   const user = {
+//     name: "sinan",
+//     email: "sina@gmail.com",
+//   };
   const joinedDate = new Date(user.createdAt).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
