@@ -26,6 +26,7 @@ export default async function MyProfilePage() {
   //     name: "sinan",
   //     email: "sina@gmail.com",
   //   };
+  
   const joinedDate = new Date(user.createdAt).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
