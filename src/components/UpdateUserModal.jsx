@@ -2,6 +2,8 @@
 
 import { authClient } from "@/lib/auth-client";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { BiEdit, BiUser } from "react-icons/bi";
 
 export function UpdateUserModal() {
@@ -14,6 +16,8 @@ export function UpdateUserModal() {
       name,
       image,
     });
+    revalidatePath("/profile");
+    redirect("/profile");
   };
   return (
     <Modal>

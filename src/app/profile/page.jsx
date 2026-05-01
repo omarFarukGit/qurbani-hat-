@@ -26,7 +26,7 @@ export default async function MyProfilePage() {
   //     name: "sinan",
   //     email: "sina@gmail.com",
   //   };
-  
+
   const joinedDate = new Date(user.createdAt).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -34,7 +34,7 @@ export default async function MyProfilePage() {
   });
 
   return (
-    <div className="min-h-screen pt-28 pb-20">
+    <div className="min-h-screen pt-10 pb-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Title */}
         <div className="mb-8 animate__animated animate__fadeInDown">
@@ -58,7 +58,7 @@ export default async function MyProfilePage() {
                       src={user.image}
                       alt={user.name || "User"}
                       fill
-                      className="object-cover"
+                      className="object-cover rounded-full"
                     />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-sun-400 to-coral-500 flex items-center justify-center text-black font-black text-4xl font-display">
