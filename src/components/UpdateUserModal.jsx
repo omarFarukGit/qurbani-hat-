@@ -2,11 +2,11 @@
 
 import { authClient } from "@/lib/auth-client";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
-import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { BiEdit, BiUser } from "react-icons/bi";
 
 export function UpdateUserModal() {
+  const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -16,8 +16,7 @@ export function UpdateUserModal() {
       name,
       image,
     });
-    revalidatePath("/profile");
-    redirect("/profile");
+    router.push("/profile");
   };
   return (
     <Modal>
