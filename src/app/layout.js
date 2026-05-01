@@ -13,11 +13,12 @@ const outfit = Outfit({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${outfit.className}  h-full antialiased `}>
-      <body className="min-h-full flex flex-col container mx-auto ">
+      <body className="min-h-full flex flex-col container mx-auto  ">
         <Navbar />
         <main className="container mx-auto">{children}</main>
         <Footer />
         <ToastContainer />
+        {/* bg-[#1a1a2e] text-[#f0e6d3] */}
       </body>
     </html>
   );
