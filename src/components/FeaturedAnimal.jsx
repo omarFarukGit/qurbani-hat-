@@ -4,7 +4,7 @@ import AnimalCard from "./AnimalCard";
 
 const FeaturedAnimal = async () => {
   const animals = await getAllAnimalsData();
-  const FeturedAnimals = animals.slice(10, 14);
+  const FeturedAnimals = animals.slice(4, 8);
   console.log(FeturedAnimals);
 
   return (
