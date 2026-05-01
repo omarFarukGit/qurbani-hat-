@@ -3,13 +3,11 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useRouter } from "next/router";
+import { redirect, usePathname } from "next/navigation";
 import React from "react";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
-  const router = useRouter();
   const currentPth = usePathname();
   console.log(currentPth);
   const userData = authClient.useSession();
@@ -17,7 +15,7 @@ const Navbar = () => {
   const handleSignOut = async () => {
     await authClient.signOut();
     toast.success("log out successfully");
-    router.push("/signin");
+    redirect("/signin");
   };
 
   const link = (
