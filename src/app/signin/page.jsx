@@ -43,7 +43,7 @@ const SignIn = () => {
 
   return (
     <div className="  h-[80vh] flex justify-center items-center">
-      <Card className="border mx-auto w-125 py-10 mt-5 backdrop-blur-lg bg-white/10  border-white/20 sticky top-0">
+      <Card className="border mx-auto w-125 py-10 mt-5 backdrop-blur-lg bg-white/10  border-white/20 sticky top-0 shadow-2xl">
         <h1 className="text-center text-2xl font-bold">Sign IN</h1>
 
         <Form className="flex  mx-auto flex-col gap-4" onSubmit={onSubmit}>
@@ -115,7 +115,7 @@ const SignIn = () => {
             <Button
               onClick={handlGoogleSignIn}
               variant="outline"
-              className={"w-full text-white"}
+              className={"w-full"}
             >
               <GrGoogle /> Sign In With Google
             </Button>

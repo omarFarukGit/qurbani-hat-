@@ -3,10 +3,13 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
+  const currentPth = usePathname();
+  console.log(currentPth);
   const userData = authClient.useSession();
   const user = userData.data?.user;
   const handleSignOut = async () => {
@@ -16,13 +19,28 @@ const Navbar = () => {
   const link = (
     <>
       <li>
-        <Link href={"/"}>Home</Link>
+        <Link
+          className={`${currentPth === "/" ? "bg-red-300" : ""}`}
+          href={"/"}
+        >
+          Home
+        </Link>
       </li>
       <li>
-        <Link href={"/all-animals"}>all-animals</Link>
+        <Link
+          className={`${currentPth === "/all-animals" ? "bg-red-300" : ""}`}
+          href={"/all-animals"}
+        >
+          all-animals
+        </Link>
       </li>
       <li>
-        <Link href={"/profile"}>Profile</Link>
+        <Link
+          className={`${currentPth === "/profile" ? "bg-red-300" : ""}`}
+          href={"/profile"}
+        >
+          Profile
+        </Link>
       </li>
     </>
   );
@@ -55,7 +73,9 @@ const Navbar = () => {
               {link}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">QurBaniHat</a>
+          <Link href={"/"} className=" text-3xl">
+            QurBaniHat
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{link}</ul>

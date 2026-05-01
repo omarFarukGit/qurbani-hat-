@@ -1,26 +1,31 @@
 import { Button } from "@heroui/react";
+import Image from "next/image";
 import Link from "next/link";
+import bannarImg from "@/assets/image.jpg";
 
 const Banner = () => {
   return (
-    <div className="bg-[url('https://tinyurl.com/z6wu2r69')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl">
-      {/* Overlay */}
-      <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
-        <div className="max-w-7xl mx-auto px-6 text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl">
-            Turn Ideas into Stunning AI Art
-          </h1>
-          <p className="text-lg md:text-xl mb-6 max-w-xl text-gray-200">
-            Generate high-quality images from simple text prompts.
-          </p>
+    <div className="hero  min-h-[60vh] bg-green-950/10">
+      <div className="hero-content flex-col lg:flex-row-reverse">
+        <Image
+          src={bannarImg}
+          className="max-w-sm rounded-lg shadow-2xl"
+          width={400}
+          height={300}
+          alt="hero"
+        />
+        <div>
+          <h1 className="text-5xl font-bold">QurBani</h1>
+          <h2 className=" text-4xl">with Esay and Joy</h2>
+          <h3 className=" text-2xl">NEAT AND CLEAN MEET AT YOUR DOORSTEP</h3>
 
-          <div className="flex gap-4">
-            <Link href="#">
-              <Button className="bg-linear-to-r from-pink-500 via-purple-500 bg-red-500">
-                browse Now
-              </Button>
-            </Link>
-          </div>
+          <p className="py-6 text-base">
+            Book your Qurbani shere today enjoy a worry-free Eid
+            Celebrite.sacrifice.Shere
+          </p>
+          <Link href={"/all-animals"}>
+            <button className="btn btn-primary">Browse Now</button>
+          </Link>
         </div>
       </div>
     </div>

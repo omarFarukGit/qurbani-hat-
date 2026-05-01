@@ -8,10 +8,13 @@ const FeaturedAnimal = async () => {
   console.log(FeturedAnimals);
 
   return (
-    <div className=" grid grid-cols-4 gap-3 mt-6 max-w-7xl mx-auto">
-      {FeturedAnimals.map((animal) => (
-        <AnimalCard key={animal.id} animal={animal} />
-      ))}
+    <div className="mt-6 max-w-7xl mx-auto">
+      <p className=" text-2xl ">Fetured Animal</p>
+      <div className=" grid grid-cols-4 gap-3 ">
+        {FeturedAnimals.map((animal) => (
+          <AnimalCard key={animal.id} animal={animal} />
+        ))}
+      </div>
     </div>
   );
 };
