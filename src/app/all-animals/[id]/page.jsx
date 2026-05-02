@@ -1,3 +1,5 @@
+import { OrderModel } from "@/components/OrderModel";
+import { UpdateUserModal } from "@/components/UpdateUserModal";
 import { getAllAnimalsData } from "@/lib/data";
 import Image from "next/image";
 import React from "react";
@@ -9,7 +11,7 @@ const AnimalDetails = async ({ params }) => {
   const animal = animals.find((a) => a.id == id);
   return (
     animal && (
-      <div className="max-w-6xl w-full px-6 h-[80vh] mx-auto">
+      <div className="max-w-6xl w-full px-6 h-[80vh] mx-auto mb-10">
         <div className="flex flex-col md:flex-row gap-16 mt-4">
           <div className="flex gap-3">
             <div className="flex flex-col gap-3"></div>
@@ -31,9 +33,6 @@ const AnimalDetails = async ({ params }) => {
             <div className="flex items-center gap-0.5 mt-1"></div>
 
             <div className="mt-6">
-              <p className="text-gray-500/70 line-through">
-                MRP: ${animal.price}
-              </p>
               <p className="text-2xl font-medium flex items-center">
                 Price: <TbCurrencyTaka />
                 {animal.price}
@@ -41,18 +40,21 @@ const AnimalDetails = async ({ params }) => {
               <span className="text-gray-500/70">(inclusive of all taxes)</span>
             </div>
 
-            <p className="text-base font-medium mt-6">About Product</p>
+            <p className="text-base font-medium mt-6">About Animals</p>
             <ul className="list-disc ml-4 text-gray-500/70">
-              <li>{animal.details}</li>
+              <li>Type:{animal.type}</li>
+              <li>Weight:{animal.weight}</li>
+              <li>Age:{animal.age}</li>
+              <li>Breed:{animal.breed}</li>
+              <li>Location:{animal.location}</li>
+              <li>Descriptions:{animal.description}</li>
             </ul>
 
             <div className="flex items-center mt-10 gap-4 text-base">
-              <button className="w-full py-3.5 cursor-pointer font-medium bg-gray-100 text-gray-800/80 hover:bg-gray-200 transition">
-                Add to Cart
-              </button>
               <button className="w-full py-3.5 cursor-pointer font-medium bg-indigo-500 text-white hover:bg-indigo-600 transition">
-                Buy now
+                <OrderModel />
               </button>
+              <div className="w-full"></div>
             </div>
           </div>
         </div>

@@ -50,8 +50,8 @@ const AnimalCard = ({ animal }) => {
       <Link href={`/all-animals/${animal.id}`}>
         {" "}
         <div className=" flex justify-between items-center border px-2 btn bg-green-400 text-white btn-ghost">
-          <p>Book Now</p>
-          <GrDeliver />
+          <p>Animal Details</p>
+          {/* <GrDeliver /> */}
         </div>
       </Link>
     </Card>
