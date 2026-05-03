@@ -25,13 +25,13 @@ const AllAnimals = () => {
   });
 
   return (
-    <div className="max-w-7xl mx-auto mb-4">
+    <div className="max-w-7xl mx-auto mb-4 px-4">
       <div className="flex justify-between items-center my-10">
         <p>Animals</p>
 
         <select
           onChange={(e) => setSortType(e.target.value)}
-          className="select text-black border px-3 py-2 rounded"
+          className="select w-[50vw] sm:w-[20vw] text-black border px-3 py-2 rounded"
         >
           <option value="">Sort by price</option>
           <option value="low">Low → High</option>

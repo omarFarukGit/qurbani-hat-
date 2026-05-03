@@ -11,7 +11,7 @@ const AnimalDetails = async ({ params }) => {
   const animal = animals.find((a) => a.id == id);
   return (
     animal && (
-      <div className="max-w-6xl w-full px-6 h-[80vh] mx-auto mb-10">
+      <div className="max-w-6xl w-full px-6 h-[80vh] mx-auto mb-20 sm:mb-10">
         <div className="flex flex-col md:flex-row gap-16 mt-4">
           <div className="flex gap-3">
             <div className="flex flex-col gap-3"></div>

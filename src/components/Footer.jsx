@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { CiFacebook, CiTwitter } from "react-icons/ci";
+import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative  bg-blue-500/10 ">
+    <footer className="relative  bg-blue-950 text-white ">
       <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
       {/* Background Layer */}
@@ -31,98 +33,63 @@ const Footer = () => {
                 height={32}
                 className="dark:brightness-200"
               /> */}
-              <h2 className="text-xl font-semibold tracking-tight text-black dark:text-white">
+              <h2 className="text-xl font-semibold tracking-tight  dark:text-white">
                 QurBanir-Hat
               </h2>
             </div>
 
-            <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 max-w-xs">
+            <p className="text-sm leading-relaxed text-gray-400 dark:text-gray-400 max-w-xs">
               Online Qurbani Hat is a modern digital platform where users can
               select, book, and complete their Qurbani (sacrifice) from home.
             </p>
           </div>
 
           {/* animal */}
-          <div>
-            <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
+          <div className=" text-white">
+            <h3 className="text-sm font-semibold  dark:text-white mb-4">
               Animals
             </h3>
-            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-              <li>
-                <Link
-                  href="/generate"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Cow
-                </Link>
+            <ul className="space-y-3 text-sm text-gray-400 dark:text-gray-400">
+              <li className=" dark:hover:text-white transition">Cow</li>
+              <li className=" dark:hover:text-white transition">Camel</li>
+              <li href="/pricing" className=" dark:hover:text-white transition">
+                Goat
               </li>
-              <li>
-                <Link
-                  href="/all-photos"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Camel
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/pricing"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Goat
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/pricing"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Sheep
-                </Link>
-              </li>
+              <li className=" dark:hover:text-white transition">Sheep</li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-              Company
+            <h3 className="text-sm font-semibold  dark:text-white mb-4">
+              Contact Info
             </h3>
-            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-              <li>
-                <Link
-                  href="/about"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  About
-                </Link>
+            <ul className="space-y-3 text-sm  dark:text-gray-400">
+              <li className=" dark:hover:text-white transition text-gray-400 ">
+                Support: +880 1700-000000 Email: support@qurbanihat.com
+                Location: Dhaka, Bangladesh
               </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Terms
-                </Link>
-              </li>
+              <div className=" flex gap-2">
+                <li className=" text-2xl">
+                  <CiFacebook />
+                </li>
+                <li className=" text-2xl">
+                  <FaYoutube />
+                </li>
+                <li className=" text-2xl">
+                  <CiTwitter />
+                </li>
+              </div>
             </ul>
           </div>
 
           {/* CTA Block */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-black dark:text-white">
+            <h3 className="text-sm font-semibold  dark:text-white">
               Start booking
             </h3>
 
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm  dark:text-gray-400 text-gray-400">
               A complete digital solution for performing Qurbani easily from
               home
             </p>

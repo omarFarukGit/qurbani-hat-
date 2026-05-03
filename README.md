@@ -37,7 +37,7 @@ Online Qurbani Hat = A complete digital solution for performing Qurbani easily f
 - Browse all qurbani animals
 - Filter by price range
 - Sort by Low to High / High to Low
-- Category filter (Cow, Goat, etc.)
+
 - Dynamic details page
 - Responsive design
 - Authentication

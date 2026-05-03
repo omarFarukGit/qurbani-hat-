@@ -9,7 +9,7 @@ const FeaturedAnimal = async () => {
 
   return (
     <div className="mt-6 max-w-7xl mx-auto">
-      <p className=" text-2xl px-4 ">Fetured Animal</p>
+      <p className=" text-3xl px-4 my-4 ">Fetured Animal</p>
       <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
         {FeturedAnimals.map((animal) => (
           <AnimalCard key={animal.id} animal={animal} />

@@ -75,8 +75,8 @@ const Navbar = () => {
               {link}
             </ul>
           </div>
-          <Link href={"/"} className=" text-3xl">
-            QurBaniHat
+          <Link href={"/"} className=" text-3xl text-blue-700">
+            QurBani<span className="text-red-400">Hat</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -98,9 +98,14 @@ const Navbar = () => {
               </a>
             </div>
           ) : (
-            <Link className="btn" href={"/signin"}>
-              Sign In
-            </Link>
+            <div className=" flex gap-4">
+              <Link className="btn" href={"/signin"}>
+                Sign In
+              </Link>
+              <Link className="btn" href={"/signup"}>
+                Sign up
+              </Link>
+            </div>
           )}
         </div>
       </div>
