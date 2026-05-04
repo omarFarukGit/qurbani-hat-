@@ -84,7 +84,7 @@ const Navbar = () => {
               height={50}
               className=" rounded-full"
             />
-            <Link href={"/"} className=" text-3xl text-blue-700">
+            <Link href={"/"} className="text-base sm:text-3xl text-blue-700">
               QurBani<span className="text-red-400">Hat</span>
             </Link>
           </div>
@@ -108,7 +108,7 @@ const Navbar = () => {
               </a>
             </div>
           ) : (
-            <div className=" flex gap-4">
+            <div className=" flex gap-2">
               <Link className="btn" href={"/signin"}>
                 Sign In
               </Link>

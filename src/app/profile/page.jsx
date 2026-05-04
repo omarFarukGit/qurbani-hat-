@@ -35,9 +35,9 @@ export default async function MyProfilePage() {
 
   return (
     <div className="min-h-screen pt-10 pb-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="md:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Title */}
-        <div className="mb-8 animate__animated animate__fadeInDown">
+        <div className="mb-8">
           <h1 className="font-display text-4xl font-black text-sand-100">
             My <span className="gradient-text">Profile</span>
           </h1>
