@@ -46,7 +46,7 @@ export default async function MyProfilePage() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Profile Card */}
           <div className="lg:col-span-1">
             <div className="glass rounded-3xl p-8 border border-white/8 text-center animate__animated animate__fadeInLeft">
