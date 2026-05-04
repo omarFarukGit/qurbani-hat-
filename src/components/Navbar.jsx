@@ -6,6 +6,7 @@ import Link from "next/link";
 import { redirect, usePathname } from "next/navigation";
 import React from "react";
 import { toast } from "react-toastify";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const currentPth = usePathname();
@@ -75,9 +76,18 @@ const Navbar = () => {
               {link}
             </ul>
           </div>
-          <Link href={"/"} className=" text-3xl text-blue-700">
-            QurBani<span className="text-red-400">Hat</span>
-          </Link>
+          <div className=" flex justify-center items-center gap-1">
+            <Image
+              src={logo}
+              alt={"logo.png"}
+              width={50}
+              height={50}
+              className=" rounded-full"
+            />
+            <Link href={"/"} className=" text-3xl text-blue-700">
+              QurBani<span className="text-red-400">Hat</span>
+            </Link>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{link}</ul>

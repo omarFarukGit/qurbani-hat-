@@ -28,7 +28,8 @@ Online Qurbani Hat = A complete digital solution for performing Qurbani easily f
 - React-toastify(NPM package)
 - HeroUi(NPM package)
 - DasyUI(NPM package)
-- React=icons(NPM package)
+- React-icons(NPM package)
+- Motion(NPM package)
 
 ---
 

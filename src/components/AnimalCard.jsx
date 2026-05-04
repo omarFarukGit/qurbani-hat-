@@ -1,3 +1,4 @@
+"use client";
 import { LocationArrow } from "@gravity-ui/icons";
 import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
@@ -8,11 +9,17 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { GrDeliver } from "react-icons/gr";
+import { motion } from "motion/react";
 
 const AnimalCard = ({ animal }) => {
   console.log("animal", animal);
   return (
-    <Card className="border rounded-xl bg-white/10 border border-white/20">
+    <motion.Card
+      initial={{ scale: 0.5 }}
+      whileInView={{ scale: 1 }}
+      transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+      className="border rounded-xl bg-white/10 border border-white/20"
+    >
       <div className="relative w-full aspect-square">
         <Image
           src={animal.image}
@@ -54,7 +61,7 @@ const AnimalCard = ({ animal }) => {
           {/* <GrDeliver /> */}
         </div>
       </Link>
-    </Card>
+    </motion.Card>
   );
 };
 
